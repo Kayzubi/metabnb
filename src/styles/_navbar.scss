@@ -4,12 +4,34 @@
   justify-content: space-between;
   align-items: center;
 
+  @include md {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    @extend .navbar;
+    gap: 5rem;
+
+    @include md {
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+  }
+
   &__toggle {
     display: none;
   }
 
   &__links {
-    @extend .navbar;
-    gap: 5rem;
+    @extend nav;
+    transform: translateX(-50%);
+    @include lg {
+      transform: translateX(0);
+    }
+
+    &-item {
+      display: block;
+    }
   }
 }
