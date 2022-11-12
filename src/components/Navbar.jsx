@@ -1,10 +1,10 @@
-import { ReactComponent as Navlogo } from './assets/navlogo.svg'
+import { ReactComponent as Logo } from './assets/navlogo.svg'
 
 function Navbar() {
   return (
     <div className='navbar container'>
       <div className='navbar__brand'>
-        <Navlogo />
+        <Logo />
       </div>
       <nav>
         <div className='navbar__toggle'></div>
