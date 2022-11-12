@@ -1,0 +1,12 @@
+.btn {
+  border: none;
+  background-color: transparent;
+  padding: $base-padding * 2 $base-padding * 4;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $color-primary;
+    color: $color-light;
+  }
+}

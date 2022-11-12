@@ -1,3 +1,60 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include lg {
+    // width < 1200?
+    font-size: 60%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include md {
+    // width < 900?
+    font-size: 60%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include xl {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+body {
+  font-family: 'Red Rose', cursive;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-light;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: $base-padding * 2;
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   flex-direction: column;

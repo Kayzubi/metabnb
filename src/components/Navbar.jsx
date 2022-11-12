@@ -2,7 +2,7 @@ import { ReactComponent as Navlogo } from './assets/navlogo.svg'
 
 function Navbar() {
   return (
-    <div className='navbar'>
+    <div className='navbar container'>
       <div className='navbar__brand'>
         <Navlogo />
       </div>
@@ -14,7 +14,7 @@ function Navbar() {
         <p className='navbar__links-item'>Community</p>
       </div>
       <div className='navbar__button'>
-        <button className='btn btn__connect'> Connect wallet</button>
+        <button className='btn btn-primary'> Connect wallet</button>
       </div>
     </div>
   )
