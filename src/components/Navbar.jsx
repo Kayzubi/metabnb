@@ -1,18 +1,23 @@
 import Logo from './assets/navlogo.svg'
+import { NavLink, Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className='navbar container'>
       <div className='navbar__brand'>
-        <a href='£'>
+        <Link to='/'>
           <img src={Logo} alt='' />
-        </a>
+        </Link>
       </div>
       <nav>
         <div className='navbar__toggle'></div>
         <ul className='navbar__links'>
-          <li className='navbar__links-item'>Home</li>
-          <li className='navbar__links-item'>Place to stay</li>
+          <li className='navbar__links-item'>
+            <NavLink to={'/'}>Home</NavLink>
+          </li>
+          <li className='navbar__links-item'>
+            <NavLink to={'/place'}>Place to stay</NavLink>
+          </li>
           <li className='navbar__links-item'>NFTs</li>
           <li className='navbar__links-item'>Community</li>
         </ul>
