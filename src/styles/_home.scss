@@ -16,10 +16,8 @@
   }
 
   &__heading {
-    font-size: 3.5rem;
-    margin-right: 2rem;
-    line-height: 1.5;
     width: 90%;
+    margin-right: 2rem;
   }
 
   &__text {
@@ -68,7 +66,7 @@
 
 .sponsors {
   background-color: $color-primary;
-  padding: $base-padding;
+  //   padding: $base-padding 0;
 
   .container {
     display: flex;
@@ -93,7 +91,7 @@
   background-color: $color-primary;
   color: $color-light;
   margin-bottom: 0;
-  padding: 10rem 0;
+  padding: 5rem 0;
 
   &-left {
     padding-top: 4rem;

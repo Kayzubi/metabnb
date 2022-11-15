@@ -1,7 +1,9 @@
 .btn {
   border: none;
   background-color: transparent;
-  padding: $base-padding * 2 $base-padding * 3;
+  padding: $base-padding $base-padding * 3;
+  font-size: 1.3rem;
+  font-family: inherit;
   border-radius: $base-border-radius;
   cursor: pointer;
 
@@ -14,4 +16,24 @@
     background-color: $color-light;
     color: $color-primary;
   }
+
+  &-modal {
+    background-color: #f8f9fa;
+    border: 1px solid #cfd8dc;
+    display: flex;
+    gap: 1rem;
+    padding: $base-padding;
+    margin: 1.5rem 0;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.goto {
+  position: absolute;
+  right: 10px;
+  font-weight: 400;
 }

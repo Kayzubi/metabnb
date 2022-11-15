@@ -13,7 +13,7 @@ function Home() {
       <div className='container'>
         <section id='hero' className='hero'>
           <div className='hero__left hero__col'>
-            <h1 className='hero__heading heading'>
+            <h1 className='hero__heading heading heading__primary'>
               Rent a <span className='text-primary bold'>Place</span> away from
               <span className='text-primary bold'> Home</span> in the
               <span className='text-primary bold'> Metaverse</span>
@@ -54,7 +54,7 @@ function Home() {
       <section id='nfts' className='section__nfts'>
         <div className='container'>
           <div className='section__nfts-left'>
-            <h1>Metabnb NFTs</h1>
+            <h1 className='heading heading__primary'>Metabnb NFTs</h1>
             <p>
               Discover our NFT gift cards collection. Loyal customers gets
               amazing gift cards which are traded as NFTs. These NFTs gives our

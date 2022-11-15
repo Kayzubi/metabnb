@@ -1,7 +1,7 @@
 import Logo from './assets/navlogo.svg'
 import { NavLink, Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({ openModal }) {
   return (
     <div className='navbar container'>
       <div className='navbar__brand'>
@@ -10,7 +10,11 @@ function Navbar() {
         </Link>
       </div>
       <nav>
-        <div className='navbar__toggle'></div>
+        <div className='navbar__toggle'>
+          <label className='navbar_toggle-btn'>
+            <input type='checkbox' />
+          </label>
+        </div>
         <ul className='navbar__links'>
           <li className='navbar__links-item'>
             <NavLink to={'/'}>Home</NavLink>
@@ -22,7 +26,9 @@ function Navbar() {
           <li className='navbar__links-item'>Community</li>
         </ul>
         <div className='navbar__button'>
-          <button className='btn btn-primary'> Connect wallet</button>
+          <button onClick={() => openModal()} className='btn btn-primary'>
+            Connect wallet
+          </button>
         </div>
       </nav>
     </div>

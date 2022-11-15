@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='footer'>
       <div className='container'>
-        <div className='grid'>
+        <div className='footer__grid'>
           <div className='col-1-of-4'>
             <div className='footer__info'>
               <Logo />

@@ -3,6 +3,18 @@
   color: $color-light;
   padding-top: 5rem;
 
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      display: block;
+    }
+  }
+
   &__info {
     height: 15rem;
     display: flex;
