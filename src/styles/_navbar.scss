@@ -11,7 +11,7 @@
 
   nav {
     @extend .navbar;
-    gap: 5rem;
+    gap: 3rem;
 
     @include md {
       gap: 3rem;
@@ -21,6 +21,10 @@
 
   &__toggle {
     display: none;
+  }
+
+  &__brand {
+    width: 15rem;
   }
 
   &__links {

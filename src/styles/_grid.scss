@@ -32,6 +32,10 @@
     }
 
     @include md {
+      width: 50%;
+    }
+
+    @include sm {
       width: 100% !important;
     }
   }

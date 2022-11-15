@@ -1,0 +1,122 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include md {
+    display: block;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include md {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-right: 2rem;
+    line-height: 1.5;
+    width: 90%;
+  }
+
+  &__text {
+    width: 90%;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    margin: auto;
+    display: block;
+  }
+}
+
+.input-box {
+  width: 80%;
+  max-width: 50rem;
+  position: relative;
+  border: 1px solid #d7d7d7;
+  border-radius: $base-border-radius;
+  overflow: hidden;
+  padding-left: 1rem;
+  height: 4rem;
+}
+.search {
+  width: 70%;
+  border: none;
+  font-family: inherit;
+  height: 100%;
+  background-color: transparent;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.btn-search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 0;
+  width: 30%;
+}
+
+.sponsors {
+  background-color: $color-primary;
+  padding: $base-padding;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.sponsor {
+  width: 30%;
+  min-width: 8rem;
+  text-align: center;
+
+  margin: auto;
+}
+
+.section__inspirations {
+  text-align: center;
+}
+
+.section__nfts {
+  background-color: $color-primary;
+  color: $color-light;
+  margin-bottom: 0;
+  padding: 10rem 0;
+
+  &-left {
+    padding-top: 4rem;
+  }
+
+  &-right {
+    @include md {
+      display: none;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    width: 75%;
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 3rem 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include md {
+      display: block;
+    }
+  }
+}

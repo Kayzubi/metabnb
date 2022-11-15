@@ -28,6 +28,7 @@ body {
   font-family: 'Red Rose', cursive;
   box-sizing: border-box;
   font-size: 1.6rem;
+  color: #434343;
 }
 
 ::selection {
@@ -47,9 +48,13 @@ img {
   max-width: 100%;
 }
 
+section {
+  margin: 3rem 0;
+}
+
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: $base-padding * 2;
   box-sizing: border-box;
@@ -60,4 +65,28 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+}
+
+.heading {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.bold {
+  font-weight: 700;
+}
+.text-primary {
+  color: $color-primary;
+  margin-right: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm {
+    display: block;
+  }
 }

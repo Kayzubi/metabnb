@@ -5,9 +5,14 @@
 // base
 @import './base';
 
+//layout
+// @import './grid';
+
 //components
 @import './buttons';
+@import './card';
+@import './footer';
 @import './navbar';
 
-//layout
-@import './grid';
+// pages
+@import './home';

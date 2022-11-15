@@ -1,0 +1,38 @@
+.card {
+  border: 1px solid #d7d7d7;
+  padding: $base-padding;
+  border-radius: $base-border-radius * 2;
+  width: 100%;
+  margin: auto;
+
+  @include md {
+    margin-bottom: 2rem;
+    width: 30rem;
+  }
+
+  &__image {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__like {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: aliceblue;
+  }
+
+  &__details {
+    margin-top: 0.5rem;
+    font-size: 10px;
+    text-align: left;
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

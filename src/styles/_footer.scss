@@ -1,0 +1,30 @@
+.footer {
+  background-color: $color-dark;
+  color: $color-light;
+  padding-top: 5rem;
+
+  &__info {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .icons > * {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
