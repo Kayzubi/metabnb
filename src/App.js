@@ -9,8 +9,6 @@ import Modal from './components/shared/Modal'
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false)
-  const [navOpen, setNavOpen] = useState(true)
-  const [screenWidth, setScreenWidth] = useState()
 
   useEffect(() => {
     setModalOpen(false)
@@ -23,25 +21,9 @@ function App() {
       e.target.className === 'modal' ||
       e.target.parentElement.className === 'btn-closeModal'
     ) {
-      console.log(e.target)
       setModalOpen(false)
     }
   }
-  //Get Screen Width
-  window.onload = (e) => {
-    setScreenWidth(window.innerWidth)
-  }
-  window.onresize = (e) => {
-    setScreenWidth(e.target.innerWidth)
-  }
-
-  useEffect(() => {
-    if (screenWidth < 768) {
-      setNavOpen(false)
-    } else {
-      setNavOpen(true)
-    }
-  }, [screenWidth])
 
   return (
     <Router>

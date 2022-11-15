@@ -1,45 +1,143 @@
+// .navbar {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: relative;
+//   height: 6rem;
+
+//   nav {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 3rem;
+//   }
+
+//   &__brand {
+//     width: 15rem;
+//   }
+
+//   &__links {
+//     @extend nav;
+//     transform: translateX(-50%);
+//     @include lg {
+//       transform: translateX(0);
+//     }
+
+//     &-item {
+//       display: block;
+//     }
+//   }
+// }
+
+// .active {
+//   color: $color-primary;
+// }
+// .hamburger {
+//   height: 4rem;
+//   width: 4rem;
+//   padding: $base-padding;
+//   cursor: pointer;
+//   position: absolute;
+//   top: 10px;
+//   font-size: 3rem;
+//   border: none;
+//   background-color: transparent;
+//   right: 25px;
+// }
+
+// @include md {
+//   .navbar {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+
+//   nav {
+//     position: absolute;
+//     top: 6rem;
+//     height: 20vh;
+//     left: 0;
+//     flex-direction: column;
+//     width: 100%;
+//     background-color: #fff;
+//     border-top: 1px solid #d7d7d7;
+//     z-index: 999;
+//   }
+// }
+
 .navbar {
+  height: 60px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
-  @include md {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    @extend .navbar;
-    gap: 3rem;
-
-    @include md {
-      gap: 3rem;
-      margin-top: 2rem;
-    }
-  }
-
-  &__toggle {
-    display: none;
-  }
+  position: relative;
+  padding: $base-padding $base-padding * 2;
 
   &__brand {
     width: 15rem;
+    display: block;
+  }
+
+  &__menu {
+    margin-left: auto;
+  }
+  &__collapse {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
   }
 
   &__links {
-    @extend nav;
-    transform: translateX(-50%);
-    @include lg {
-      transform: translateX(0);
-    }
-
-    &-item {
-      display: block;
-    }
+    display: flex;
+    gap: 3rem;
   }
 }
-
-.active {
+.hamburger {
+  height: 4rem;
+  width: 4rem;
+  padding: $base-padding;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  border: none;
+  background-color: transparent;
+  right: 25px;
+  display: none;
   color: $color-primary;
+}
+
+@include md {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    &__collapse {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: white;
+      border-top: 1px solid #d7d7d7;
+      padding-top: 1rem;
+      z-index: 888;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__collapse.expanded {
+      display: block;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
 }

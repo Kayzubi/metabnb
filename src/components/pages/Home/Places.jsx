@@ -10,22 +10,22 @@ import Card from '../../shared/Card'
 
 function Places() {
   const places = [
-    Place1,
-    Place2,
-    Place3,
-    Place4,
-    Place5,
-    Place6,
-    Place7,
-    Place8,
+    { place: Place1, id: 1 },
+    { place: Place2, id: 2 },
+    { place: Place3, id: 3 },
+    { place: Place4, id: 4 },
+    { place: Place5, id: 5 },
+    { place: Place6, id: 6 },
+    { place: Place7, id: 8 },
+    { place: Place8, id: 9 },
   ]
 
   return (
     <div className='grid'>
       {places.map((place) => {
         return (
-          <div className='card-box'>
-            <Card image={place} />
+          <div key={place.id} className='card-box'>
+            <Card image={place.place} />
           </div>
         )
       })}
