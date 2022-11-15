@@ -8,7 +8,7 @@ function Modal({ closeModal }) {
     <div className='modal' onClick={(e) => closeModal(e)}>
       <div className='modal__content'>
         <div className='modal__header'>
-          <h1>Connect Wallet</h1>
+          <h1 className='modal__heading'>Connect Wallet</h1>
           <button className='btn-closeModal'>
             <IoIosClose onClick={(e) => closeModal(e)} />
           </button>
