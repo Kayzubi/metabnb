@@ -97,11 +97,6 @@
     padding-top: 4rem;
   }
 
-  &-right {
-    @include md {
-      display: none;
-    }
-  }
   p {
     font-size: 1.5rem;
     width: 75%;
